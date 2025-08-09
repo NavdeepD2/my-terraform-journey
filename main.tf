@@ -11,6 +11,7 @@ variable "instance_type" {
 resource "aws_instance" "webserver" {
   ami = "ami-0efdf839508ec2995"
   instance_type = var.instance_type
+  availability_zone = "us-west-2b"
   key_name = "navdeep-7aug25"
   tags = {
 	Name = "Prod"
@@ -18,6 +19,6 @@ resource "aws_instance" "webserver" {
 }
 
 resource "aws_ebs_volume" "webserverEBS" {
-  availability_zone = "us-west-2a"
+  availability_zone = "us-west-2b"
   size = 10
 }
