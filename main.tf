@@ -24,6 +24,12 @@ resource "aws_ebs_volume" "webserverEBS" {
   size = 10
 }
 
+resource "aws_volume_attachment" "ebs_attach" {
+  device_name = "/dev/sdh"
+  volume_id = aws_ebs_volume.webserverEBS.id
+  instance_id = aws_instance.webserver.id
+}
+
 resource "aws_eip" "lb" {
   instance = aws_instance.webserver.id
   domain = "vpc"
