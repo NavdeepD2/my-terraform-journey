@@ -22,3 +22,12 @@ resource "aws_ebs_volume" "webserverEBS" {
   availability_zone = "us-west-2b"
   size = 10
 }
+
+resource "aws_eip" "lb" {
+  instance = aws_instance.webserver.id
+  domain = "vpc"
+}
+
+
+
+
