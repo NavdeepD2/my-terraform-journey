@@ -12,6 +12,7 @@ resource "aws_instance" "webserver" {
   ami = "ami-0efdf839508ec2995"
   instance_type = var.instance_type
   availability_zone = "us-west-2b"
+  security_groups = ["launch-wizard-3"]
   key_name = "navdeep-7aug25"
   tags = {
 	Name = "Prod"
