@@ -1,5 +1,5 @@
 # My Terraform Journey
-Documenting my Terraform learning journey, step-by-step, from beginner to advanced.
+Documenting my Terraform learning journey, step-by-step , from beginner to advanced.
 
 ## Summary of Tasks in the Script:
 
